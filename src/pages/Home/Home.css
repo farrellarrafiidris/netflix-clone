@@ -3,6 +3,7 @@
 }
 
 .banner-img {
+    max-height: 100vh;
     width: 100%;
     -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
     mask-image: linear-gradient(to right, transparent, black 75%);
@@ -18,7 +19,7 @@
 .caption-img{
     width: 90%;
     max-width: 500px;
-    margin-bottom:30px;
+    margin-bottom:15px;
 }
 
 .hero-caption p{
@@ -63,4 +64,8 @@
 
 .dark-btn:hover{
     background-color: #6d6d6e66;
+}
+
+.more-cards{
+    padding-left: 6%;
 }
