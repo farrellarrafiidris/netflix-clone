@@ -11,3 +11,8 @@ body{
   background:black;
   color: white;
 }
+
+body::-webkit-scrollbar{
+  display: none;
+  scroll-behavior: smooth;
+}
