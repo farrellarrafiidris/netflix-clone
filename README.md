@@ -1,8 +1,18 @@
-# React + Vite
+# Netflix Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a clone of the Netflix website, built using React. The goal of this project is to replicate the design and functionality of the Netflix platform, including features like browsing movies and shows, viewing details, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: The application is fully responsive, providing an optimal viewing experience across all devices.
+- **React Components**: Modular and reusable React components are used throughout the project for easy maintenance and scalability.
+- **React Hooks**: Utilizes hooks like `useState`, `useEffect`, and custom hooks for state and effect management.
+- **Firebase Integration**: Authentication and real-time database functionalities are handled using Firebase.
+- **Styled Components**: Implements styled-components for scoped, maintainable CSS.
+- **API Integration**: Movie data is fetched from a third-party API to mimic the real Netflix experience.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/farrellarrafiidris/netflix-clone.git
