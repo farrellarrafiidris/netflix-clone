@@ -46,14 +46,23 @@ const Home = () => {
               More Info
             </button>
           </div>
-          <TitleCards/>
+          <TitleCards />
         </div>
       </div>
       <div className="more-cards">
-      <TitleCards title={"Top Rated"} category={"top_rated"}/>
-      <TitleCards title={"Popular"} category={"popular"}/>
-      <TitleCards title={"Upcoming"} category={"upcoming"}/>
-      <Footer/>
+        <TitleCards
+          title={"Top Rated"}
+          category={"top_rated"}
+        />
+        <TitleCards
+          title={"Popular"}
+          category={"popular"}
+        />
+        <TitleCards
+          title={"Upcoming"}
+          category={"upcoming"}
+        />
+        <Footer />
       </div>
     </div>
   );

@@ -1,6 +1,11 @@
-import { initializeApp} from "firebase/app";
-import {createUserWithEmailAndPassword,getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth"
-import {addDoc, collection, getFirestore} from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -10,7 +15,7 @@ const firebaseConfig = {
   storageBucket: "netflix-clone-8e96d.appspot.com",
   messagingSenderId: "360120095429",
   appId: "1:360120095429:web:3b79e010228b71f31956ac",
-  measurementId: "G-Z32DW6C6TG"
+  measurementId: "G-Z32DW6C6TG",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -18,33 +23,33 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const signUp = async (name,email,password) => {
-    try {
-        const res = await createUserWithEmailAndPassword(auth, email, password);
-        const user = res.user;
-        await addDoc(collection(db,"user"),{
-            uid: user.uid,
-            name,
-            authProvider:"local",
-            email,
-        })
-    } catch (error){
-        console.log(error);
-        alert(error);
-    }
-}
+const signUp = async (name, email, password) => {
+  try {
+    const res = await createUserWithEmailAndPassword(auth, email, password);
+    const user = res.user;
+    await addDoc(collection(db, "user"), {
+      uid: user.uid,
+      name,
+      authProvider: "local",
+      email,
+    });
+  } catch (error) {
+    console.log(error);
+    alert(error);
+  }
+};
 
-const login = async (email,password) => {
-    try {
-        await signInWithEmailAndPassword(auth,email,password)
-    } catch(error) {
-        console.log(error);
-        alert(error)
-    }
-}
+const login = async (email, password) => {
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    console.log(error);
+    alert(error);
+  }
+};
 
 const logout = () => {
-    signOut(auth)
-}
+  signOut(auth);
+};
 
-export{auth, db, login,signUp,logout}
+export { auth, db, login, signUp, logout };

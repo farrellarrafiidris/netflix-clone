@@ -16,3 +16,4 @@ This project is a clone of the Netflix website, built using React. The goal of t
 1. Clone the repository:
    ```bash
    git clone https://github.com/farrellarrafiidris/netflix-clone.git
+   ```
